@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import com.example.sawaany.R
 import com.example.sawaany.activity.NavigationHomeActivity
 import com.example.sawaany.goTo
+import com.google.android.material.navigation.NavigationView
 import kotlinx.android.synthetic.main.fragment_login.view.*
 
 
@@ -23,7 +24,7 @@ import kotlinx.android.synthetic.main.fragment_login.view.*
 /**
  * A simple [Fragment] subclass.
  */
-class LoginFragment : Fragment() {
+class LoginFragment : Fragment(){
     lateinit var root:View
 
     override fun onCreateView(
