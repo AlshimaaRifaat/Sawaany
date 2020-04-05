@@ -1,58 +1,286 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.HomeFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.HomeFragment"
+    android:background="@drawable/innerbg">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_home"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorBlue"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        >
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/constraint_home_container">
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:id="@+id/ic_menu"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:src="@drawable/menu"
+    />
+    <TextView
+        android:id="@+id/T_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_bottom_corners"
+        android:gravity="center"
+        android:text="@string/Home"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.578" />
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/T_home"
+    android:layout_marginEnd="@dimen/_20sdp"
+    android:layout_marginStart="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginBottom="@dimen/_20sdp"
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    >
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="@dimen/_125sdp"
+    android:layout_height="@dimen/_125sdp">
+    <ImageView
+        android:id="@+id/img_services"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/services"
+        android:layout_marginTop="@dimen/_8sdp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textStyle="bold"
+        android:text="@string/Services"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintTop_toBottomOf="@id/img_services"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_auctions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_125sdp">
+            <ImageView
+                android:id="@+id/img_auctions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/auctions"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:text="hooome"
-                android:textColor="#fff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"
                 android:textStyle="bold"
-                android:layout_marginStart="@dimen/_55sdp"
+                android:text="@string/Auctions"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@id/img_auctions"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_buy_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_services"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        android:layout_marginEnd="@dimen/_10sdp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_125sdp">
+            <ImageView
+                android:id="@+id/img_buy_sell"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/auctions"
+                android:layout_marginTop="@dimen/_8sdp"
                 />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="@string/Buy_Sell"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@id/img_buy_sell"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-
-
-        </RelativeLayout>
-
-
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/toolbar_home"
-        android:id="@+id/SwipHome">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_Categories"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/T_Popularproducts"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_10sdp"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_auctions"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/_125sdp"
+        android:layout_height="@dimen/_125sdp">
+        <ImageView
+            android:id="@+id/img_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/auctions"
+            android:layout_marginTop="@dimen/_8sdp"
             />
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            android:text="@string/Contact_us"
+            android:textColor="@color/colorBlack"
+            app:layout_constraintTop_toBottomOf="@id/img_contact"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ideas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_buy_sell"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        app:cardBackgroundColor="@color/colorWhite"
+        android:layout_marginEnd="@dimen/_10sdp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_125sdp">
+            <ImageView
+                android:id="@+id/img_ideas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/auctions"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="@string/Ideas_and_Complain"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@id/img_ideas"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_contact"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_3sdp"
+        app:cardElevation="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:cardBackgroundColor="@color/colorWhite">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_125sdp"
+            android:layout_height="@dimen/_125sdp">
+            <ImageView
+                android:id="@+id/img_about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/auctions"
+                android:layout_marginTop="@dimen/_8sdp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:text="@string/About_App"
+                android:textColor="@color/colorBlack"
+                app:layout_constraintTop_toBottomOf="@id/img_about"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

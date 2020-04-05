@@ -10,7 +10,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 
 import com.example.sawaany.R
-import com.example.sawaany.activity.NavigationHomeActivity
+import com.example.sawaany.activity.NavigationActivity
+import kotlinx.android.synthetic.main.app_bar_navigation.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 /**
@@ -25,14 +26,19 @@ lateinit var root:View
         // Inflate the layout for this fragment
         root= inflater.inflate(R.layout.fragment_home, container, false)
         init()
+        root.card_services.setOnClickListener { view -> replaceFragment(ServicesFragment())  }
         return root
     }
+    fun replaceFragment(fragment: Fragment){
+        fragmentManager!!.beginTransaction().replace(R.id.constraint_home_container, fragment)
+            .addToBackStack(null).commit()
 
+    }
     private fun init() {
         val toggle = ActionBarDrawerToggle(
             activity,
-            NavigationHomeActivity.drawerLayout,
-            root!!.toolbar_home,
+            NavigationActivity.drawerLayout,
+            root!!.toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
@@ -40,9 +46,9 @@ lateinit var root:View
             syncState()
             isDrawerIndicatorEnabled = false
             setHomeAsUpIndicator(R.drawable.menu)
-            setToolbarNavigationClickListener { NavigationHomeActivity.drawerLayout!!.openDrawer(GravityCompat.START) }
+            setToolbarNavigationClickListener { NavigationActivity.drawerLayout!!.openDrawer(GravityCompat.START) }
         }
-        NavigationHomeActivity.drawerLayout?.addDrawerListener(toggle)
+        NavigationActivity.drawerLayout?.addDrawerListener(toggle)
     }
 
 

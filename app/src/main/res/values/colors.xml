@@ -7,6 +7,8 @@
     <color name="colorBlack">#000</color>
     <color name="colorBlue">#0065b3</color>
     <color name="colorGrey6">#B1B0B0</color>
+    <color name="colorGrey2">#ededed</color>
+
 
 
 </resources>

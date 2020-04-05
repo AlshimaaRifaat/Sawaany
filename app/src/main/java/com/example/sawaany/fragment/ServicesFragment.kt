@@ -2,37 +2,51 @@ package com.example.sawaany.fragment
 
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
-
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sawaany.R
-import com.example.sawaany.activity.NavigationHomeActivity
-import kotlinx.android.synthetic.main.fragment_home.view.*
+import com.example.sawaany.activity.NavigationActivity
+import com.example.sawaany.adapter.ServicesAdapter
+import kotlinx.android.synthetic.main.app_bar_navigation.view.*
+import kotlinx.android.synthetic.main.fragment_services.view.*
 
 /**
  * A simple [Fragment] subclass.
  */
 class ServicesFragment : Fragment() {
+    lateinit var servicesAdapter: ServicesAdapter
     lateinit var root:View
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_services, container, false)
+        root= inflater.inflate(R.layout.fragment_services, container, false)
         init()
+        ServicesList()
+
         return root
+    }
+
+    private fun ServicesList() {
+      root.recyclerServices.apply {
+            layoutManager= GridLayoutManager(context,2)
+            servicesAdapter = ServicesAdapter(context)
+            adapter=servicesAdapter
+        }
     }
 
     private fun init() {
         val toggle = ActionBarDrawerToggle(
             activity,
-            NavigationHomeActivity.drawerLayout,
-            root!!.toolbar_home,
+            NavigationActivity.drawerLayout,
+            root!!.toolbar,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
@@ -40,10 +54,10 @@ class ServicesFragment : Fragment() {
             syncState()
             isDrawerIndicatorEnabled = false
             setHomeAsUpIndicator(R.drawable.menu)
-            setToolbarNavigationClickListener { NavigationHomeActivity.drawerLayout!!.openDrawer(
+            setToolbarNavigationClickListener { NavigationActivity.drawerLayout!!.openDrawer(
                 GravityCompat.START) }
         }
-        NavigationHomeActivity.drawerLayout?.addDrawerListener(toggle)
+        NavigationActivity.drawerLayout?.addDrawerListener(toggle)
     }
 
 

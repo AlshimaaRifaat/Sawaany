@@ -16,4 +16,14 @@
     <string name="Sign_Up">Sign Up</string>
     <string name="home">home</string>
     <string name="signing">Signing</string>
+    <string name="Home">Home</string>
+    <string name="Services">Services</string>
+    <string name="Auctions">Auctions</string>
+    <string name="Buy_Sell"><![CDATA[Buy & Sell]]></string>
+    <string name="Contact_us">Contact us</string>
+    <string name="Ideas_and_Complain"><![CDATA[Ideas & Complain]]></string>
+    <string name="About_App">About App</string>
+    <string name="Our_Services">Our Services</string>
+    <string name="Pharmacy">Pharmacy</string>
+    <string name="Request">Request</string>
 </resources>
