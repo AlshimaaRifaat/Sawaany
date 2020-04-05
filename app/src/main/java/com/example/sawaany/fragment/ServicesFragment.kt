@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import com.example.sawaany.R
 import com.example.sawaany.activity.NavigationActivity
 import com.example.sawaany.adapter.ServicesAdapter
 import kotlinx.android.synthetic.main.app_bar_navigation.view.*
+import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.fragment_services.view.*
 
 /**
@@ -28,25 +30,18 @@ class ServicesFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         root= inflater.inflate(R.layout.fragment_services, container, false)
-        init()
+      init()
         ServicesList()
 
         return root
     }
 
-    private fun ServicesList() {
-      root.recyclerServices.apply {
-            layoutManager= GridLayoutManager(context,2)
-            servicesAdapter = ServicesAdapter(context)
-            adapter=servicesAdapter
-        }
-    }
-
     private fun init() {
+        //Toast.makeText(context, "Hi there! This is a Toast.", Toast.LENGTH_SHORT).show()
         val toggle = ActionBarDrawerToggle(
             activity,
             NavigationActivity.drawerLayout,
-            root!!.toolbar,
+            root!!.toolbar_services,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
@@ -59,6 +54,16 @@ class ServicesFragment : Fragment() {
         }
         NavigationActivity.drawerLayout?.addDrawerListener(toggle)
     }
+
+    private fun ServicesList() {
+      root.recyclerServices.apply {
+            layoutManager= GridLayoutManager(context,2)
+            servicesAdapter = ServicesAdapter(context)
+            adapter=servicesAdapter
+        }
+    }
+
+
 
 
 }

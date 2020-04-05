@@ -4,8 +4,12 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sawaany.R
+import com.example.sawaany.fragment.DetailsServicesFragment
+import kotlinx.android.synthetic.main.fragment_services.view.*
 
 
 class ServicesAdapter (private val context: Context) :
@@ -20,8 +24,16 @@ class ServicesAdapter (private val context: Context) :
     }
 
     override fun onBindViewHolder(holder: ServicesAdapter.mViewHolder, position: Int) {
-
+           holder.itemView.setOnClickListener()
+           {
+               val activity = holder.itemView.getContext() as AppCompatActivity
+               val myFragment: Fragment = DetailsServicesFragment()
+               activity.supportFragmentManager.beginTransaction()
+                   .replace(R.id.constraint_services_container, myFragment).addToBackStack(null).commit()
+           }
     }
+
+
 
     override fun getItemCount(): Int {
         // return heroList.size();
@@ -29,6 +41,7 @@ class ServicesAdapter (private val context: Context) :
     }
 
     class mViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
 
     }
 }

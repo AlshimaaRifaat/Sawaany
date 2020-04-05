@@ -25,8 +25,10 @@ lateinit var root:View
     ): View? {
         // Inflate the layout for this fragment
         root= inflater.inflate(R.layout.fragment_home, container, false)
-        init()
+//        root.ic_menu.setOnClickListener { view -> init() }
         root.card_services.setOnClickListener { view -> replaceFragment(ServicesFragment())  }
+        init()
+
         return root
     }
     fun replaceFragment(fragment: Fragment){
@@ -38,7 +40,7 @@ lateinit var root:View
         val toggle = ActionBarDrawerToggle(
             activity,
             NavigationActivity.drawerLayout,
-            root!!.toolbar,
+            root!!.toolbarhome,
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )

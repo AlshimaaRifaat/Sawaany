@@ -4,25 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/services_container"
-    tools:context=".fragment.ServicesFragment"
-    android:background="@drawable/innerbg">
+    android:background="@drawable/innerbg"
+    tools:context=".fragment.DetailsServicesFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/constraint_services_container">
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_services"
-            android:layout_width="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@android:color/transparent"
-            app:popupTheme="@style/AppTheme.PopupOverlay"
-            />
-   <!-- <ImageView
+        android:id="@+id/constraint_home_container">
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,14 +20,14 @@
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_20sdp"
         android:src="@drawable/menu"
-        />-->
+        />
     <TextView
         android:id="@+id/T_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/text_bottom_corners"
         android:gravity="center"
-        android:text="@string/Our_Services"
+        android:text="Crafts"
         android:textStyle="bold"
         android:textSize="@dimen/_14ssp"
         android:textAlignment="center"
@@ -47,18 +36,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.578" />
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerServices"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/T_home"
-            android:layout_marginStart="@dimen/_10sdp"
-            android:layout_marginTop="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_10sdp"
-            ></androidx.recyclerview.widget.RecyclerView>
     </androidx.constraintlayout.widget.ConstraintLayout>
+   
 
 </ScrollView>
