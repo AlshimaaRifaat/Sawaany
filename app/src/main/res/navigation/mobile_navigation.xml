@@ -16,6 +16,11 @@
         android:name="com.example.sawaany.fragment.ServicesFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_services" />
+    <fragment
+        android:id="@+id/auctions_fragment"
+        android:name="com.example.sawaany.fragment.AuctionsFragment"
+        android:label="@string/Auctions"
+        tools:layout="@layout/fragment_auctions" />
 
    <!-- <fragment
         android:id="@+id/nav_slideshow"

@@ -43,7 +43,7 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.item_home, R.id.item_services
+                R.id.item_home, R.id.item_services,R.id.item_auctions
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -75,6 +75,7 @@ class NavigationActivity : AppCompatActivity(),NavigationView.OnNavigationItemSe
 
                 R.id.item_home -> navController.navigate(R.id.home_fragment)
                 R.id.item_services-> navController.navigate(R.id.services_fragment)
+                R.id.item_auctions-> navController.navigate(R.id.auctions_fragment)
             }
         }
 

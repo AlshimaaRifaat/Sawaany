@@ -8,8 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sawaany.R
-import com.example.sawaany.fragment.DetailsServicesFragment
-import kotlinx.android.synthetic.main.fragment_services.view.*
+import com.example.sawaany.fragment.SubServicesFragment
 
 
 class ServicesAdapter (private val context: Context) :
@@ -27,7 +26,7 @@ class ServicesAdapter (private val context: Context) :
            holder.itemView.setOnClickListener()
            {
                val activity = holder.itemView.getContext() as AppCompatActivity
-               val myFragment: Fragment = DetailsServicesFragment()
+               val myFragment: Fragment = SubServicesFragment()
                activity.supportFragmentManager.beginTransaction()
                    .replace(R.id.constraint_services_container, myFragment).addToBackStack(null).commit()
            }
