@@ -327,10 +327,32 @@
                     app:layout_constraintTop_toBottomOf="@id/T_report"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
+        <ImageView
+            android:id="@+id/img_prev"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/prev"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_details"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/img_prev"
+            app:layout_constraintTop_toBottomOf="@id/card_details"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/Previous_Page"
+            android:textColor="@color/colorBlue"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="bold"
+            />
         <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_80sdp"
-            app:layout_constraintTop_toBottomOf="@id/card_details"/>
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@id/img_prev"
+            app:layout_constraintStart_toStartOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

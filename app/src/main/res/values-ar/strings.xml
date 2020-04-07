@@ -35,4 +35,6 @@
     <string name="Start_from">Start from</string>
     <string name="Address_here">Address here</string>
     <string name="Images">Images</string>
+    <string name="Reviews">Reviews</string>
+    <string name="Write_a_review">Write a review</string>
 </resources>

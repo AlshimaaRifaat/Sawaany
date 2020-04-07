@@ -22,7 +22,7 @@ import kotlinx.android.synthetic.main.fragment_services.view.*
  * A simple [Fragment] subclass.
  */
 class HomeFragment : Fragment() {
-lateinit var root:View
+    lateinit var root:View
     lateinit var homeAdapter: HomeAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

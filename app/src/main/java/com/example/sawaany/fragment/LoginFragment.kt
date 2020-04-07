@@ -25,7 +25,7 @@ import kotlinx.android.synthetic.main.fragment_login.view.*
  */
 class LoginFragment : Fragment(){
     lateinit var root:View
-   lateinit var popUpview:View
+    lateinit var popUpview:View
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
@@ -40,7 +40,6 @@ class LoginFragment : Fragment(){
 
     private fun goToLayoutForgetPassword() {
         val builder = android.app.AlertDialog.Builder(context).create()
-
         popUpview = LayoutInflater.from(context).inflate(R.layout.layout_forget_password, null)
         builder.setView(popUpview)
         // dialog.setCancelable(false);
