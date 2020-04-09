@@ -56,5 +56,9 @@
     <string name="Images">Images</string>
     <string name="Reviews">Reviews</string>
     <string name="Write_a_review">Write a review</string>
+    <string name="What_is_your_problem">What is your problem?</string>
+    <string name="Problem_details">Problem details</string>
+    <string name="Date">Date</string>
+    <string name="Time">Time</string>
 
 </resources>

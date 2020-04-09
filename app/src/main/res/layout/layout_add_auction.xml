@@ -9,11 +9,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.23"
+        app:layout_constraintGuide_percent="0.22"
         />
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_140sdp"
+        android:layout_height="@dimen/_120sdp"
         android:background="@color/colorGrey2"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,13 +24,13 @@
 
         <ImageView
             android:id="@+id/img_services"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:background="@drawable/auctions"
-            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_17sdp"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_22sdp"
-        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_2sdp"
         android:layout_marginEnd="@dimen/_22sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,14 +58,15 @@
         <EditText
             android:id="@+id/title"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_41sdp"
             android:inputType="text"
             android:gravity="center|start"
             android:hint="@string/Auction_title"
+            android:textColor="@color/colorGrey6"
             android:padding="@dimen/_2sdp"
             android:textColorHint="@color/colorGrey6"
             android:textStyle="bold"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_12sdp"
             android:drawableStart="@drawable/title"
             android:drawablePadding="@dimen/_10sdp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -82,14 +83,15 @@
         <EditText
             android:id="@+id/ET_street_name"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_41sdp"
             android:inputType="text"
             android:gravity="center|start"
             android:hint="@string/Product_description"
+            android:textColor="@color/colorGrey6"
             android:padding="@dimen/_2sdp"
             android:textColorHint="@color/colorGrey6"
             android:textStyle="bold"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_12sdp"
             android:drawableStart="@drawable/description"
             android:drawablePadding="@dimen/_10sdp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,12 +110,12 @@
         <Spinner
             android:id="@+id/spinner_product_desc"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_41sdp"
             android:layout_gravity="center"
             android:background="#fff"
             android:gravity="center|start"
-            android:textColor="#ffff"
-            android:textSize="14sp"
+            android:textColor="@color/colorGrey6"
+            android:textSize="@dimen/_12ssp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/ic_spinner"
             app:layout_constraintStart_toStartOf="parent"
@@ -174,14 +176,15 @@
         <EditText
             android:id="@+id/ET_start_from"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_41sdp"
             android:inputType="text"
             android:gravity="center|start"
             android:hint="@string/Start_from"
             android:padding="@dimen/_2sdp"
+            android:textColor="@color/colorGrey6"
             android:textColorHint="@color/colorGrey6"
             android:textStyle="bold"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_12ssp"
             android:drawableStart="@drawable/price"
             android:drawablePadding="@dimen/_10sdp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -199,14 +202,15 @@
         <EditText
             android:id="@+id/ET_address"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_41sdp"
             android:inputType="text"
             android:gravity="center|start"
             android:hint="@string/Address_here"
             android:padding="@dimen/_2sdp"
             android:textColorHint="@color/colorGrey6"
+            android:textColor="@color/colorGrey6"
             android:textStyle="bold"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_12ssp"
             android:drawableStart="@drawable/pin"
             android:drawablePadding="@dimen/_10sdp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -224,14 +228,15 @@
         <EditText
             android:id="@+id/ET_images"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_45sdp"
+            android:layout_height="@dimen/_41sdp"
             android:inputType="text"
             android:gravity="center|start"
             android:hint="@string/Images"
             android:padding="@dimen/_2sdp"
             android:textColorHint="@color/colorGrey6"
+            android:textColor="@color/colorGrey6"
             android:textStyle="bold"
-            android:textSize="@dimen/_13sdp"
+            android:textSize="@dimen/_12sdp"
             android:drawableStart="@drawable/image"
             android:drawablePadding="@dimen/_10sdp"/>
     </com.google.android.material.textfield.TextInputLayout>
@@ -241,7 +246,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_45sdp"
         android:layout_marginEnd="@dimen/_50sdp"
-        android:layout_marginTop="@dimen/_26sdp"
+        android:layout_marginTop="@dimen/_7sdp"
         app:cardBackgroundColor="@color/colorBlue"
         app:cardCornerRadius="@dimen/_11sdp"
         app:cardElevation="@dimen/_3sdp"
@@ -250,7 +255,7 @@
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp">
+            android:layout_height="@dimen/_37sdp">
             <TextView
                 android:layout_width="@dimen/_190sdp"
                 android:layout_height="match_parent"
@@ -259,14 +264,14 @@
                 app:layout_constraintTop_toTopOf="parent"
                 android:textColor="@color/colorWhite"
                 android:text="@string/Request"
-                android:textSize="@dimen/_15sdp"
+                android:textSize="@dimen/_12sdp"
                 android:gravity="center"
                 />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
     <View
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_22sdp"
+        android:layout_height="@dimen/_17sdp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_btn_request"
